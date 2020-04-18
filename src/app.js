@@ -3,6 +3,7 @@ const path = require('path')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode.js')
 const app = express()
+const port = process.env.PORT || 3000
 // Define path for express config
 const publicdir = path.join(__dirname , '../public')
 const viewpath = path.join(__dirname , '../templates/views')
@@ -54,5 +55,5 @@ app.get('/about',(req ,res)=>{
         })
         })
 
-    app.listen(3000)
+    app.listen(port)
     
